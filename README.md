@@ -3,4 +3,14 @@
 ## Create a weekly meal plan to fit your macronutrient goals
 
 Meal planner is used to add recipes including macronutrient data into a weekly meal plan to simplify calorie/macro tracking.
-Users are able to log in to see their current plan, create and edit plans and add new recipes.
+Users are able to log in to see their current plan and make changes.
+
+### Wireframes
+
+![Home Page (Not logged in)](wireframes/homepage-not-logged-in.png)
+
+![Home Page (Logged in)](wireframes/homepage-logged-in.png)
+
+![Edit Meal Plan](wireframes/edit-meal-plan.png)
+
+![Add Meal](wireframes/add-meal.png)

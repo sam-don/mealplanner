@@ -1,2 +1,5 @@
 README.pdf
 venv/
+src/__pycache__/
+src/.mypy_cache/
+src/tests/__pycache__/

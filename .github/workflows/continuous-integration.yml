@@ -37,5 +37,5 @@ jobs:
 
       - name: Run Tests
         run: |
-          cd mealplanner
+          cd mealplanner/src
           venv/bin/python3.8 -m unittest discover tests/

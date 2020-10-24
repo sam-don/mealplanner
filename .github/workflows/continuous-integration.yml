@@ -38,6 +38,4 @@ jobs:
       - name: Run Tests
         run: |
           cd mealplanner
-          source venv/bin/activate
-          cd src
-          python3.8 -m unittest discover tests/
+          python3.8 -m unittest discover -s tests/ -t src

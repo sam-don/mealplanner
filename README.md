@@ -12,27 +12,43 @@ Users are able to log in to see their current plan and make changes.
 #### Desktop
 
 Home Page (Not logged in)
+
+
 ![Home Page (Not logged in)](docs/wireframes/homepage-not-logged-in.png)
 
 Home Page (Logged in)
+
+
 ![Home Page (Logged in)](docs/wireframes/homepage-logged-in.png)
 
 Edit Meal Plan
+
+
 ![Edit Meal Plan](docs/wireframes/edit-meal-plan.png)
 
 Add New Meal
+
+
 ![Add New Meal](docs/wireframes/new-meal.png)
 
 #### Mobile
 
 Home Page (Not logged in)
+
+
 ![Home Page (Not logged in)](docs/wireframes/mobile-homepage-not-logged-in.png)
 
 Home Page (Logged in)
+
+
 ![Home Page (Logged in)](docs/wireframes/mobile-homepage-logged-in.png)
 
 Edit Meal Plan
+
+
 ![Edit Meal Plan](docs/wireframes/mobile-edit-meal-plan.png)
 
 Add New Meal
+
+
 ![Add New Meal](docs/wireframes/mobile-new-meal.png)

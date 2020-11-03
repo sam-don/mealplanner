@@ -62,4 +62,4 @@ Add New Meal
 
 A Github Actions workflow is currently set up to run mypy, flake8 and the tests automatically when commits are pushed to Github. 
 
-The workflow will run two jobs concurrently. Both will set up an Ubuntu environment, install Python3.8, clone the repository and create a virtual environment. From there, one job runs flake8 and mypy tests, with the other ruining the unittest tests.
+The workflow will run two jobs concurrently. Both will set up an Ubuntu environment, install Python3.8, clone the repository and create a virtual environment. From there, one job runs flake8 and mypy tests, with the other running the unittest tests. If all of the tests pass the workflow completes successfully.

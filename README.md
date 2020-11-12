@@ -56,7 +56,7 @@ Add New Meal
 
     `pip install -r requirements.txt`
 
-- Now you're good to go! Open the app by running `python src/cmain.py`.
+- Now you're good to go! Open the app by running `python src/main.py`.
 
 ### CI Pipeline Overview
 
@@ -67,3 +67,7 @@ The workflow will run two jobs concurrently. Both will set up an Ubuntu environm
 ### Database Schema
 
 ![Database Schema](docs/database/schema.drawio.svg)
+
+This is the current planned database schema for this project. It is normalised and is based around users having the ability to add meals to their meal plan. 
+
+This currently needs to be expanded to have different meals for each day of the week.

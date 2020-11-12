@@ -42,7 +42,7 @@ Add New Meal
 
 - Clone the GitHub repository into a folder in your development environment and enter the project directory.
 
-- Create a new virtual environment using the following command, note that SentAlysis requires Python 3.8
+- Create a new virtual environment using the following command, note that mealplanner requires Python 3.8
 
     `python3.8 -m venv venv`
 
@@ -63,3 +63,7 @@ Add New Meal
 A Github Actions workflow is currently set up to run mypy, flake8 and the tests automatically when commits are pushed to Github. 
 
 The workflow will run two jobs concurrently. Both will set up an Ubuntu environment, install Python3.8, clone the repository and create a virtual environment. From there, one job runs flake8 and mypy tests, with the other running the unittest tests. If all of the tests pass the workflow completes successfully.
+
+### Database Schema
+
+![Database Schema](docs/database/schema.drawio.svg)

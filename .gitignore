@@ -3,4 +3,7 @@ venv/
 src/__pycache__/
 src/.mypy_cache/
 src/tests/__pycache__/
+src/controllers/__pycache__/
+src/models/__pycache__/
+src/schemas/__pycache__/
 .env

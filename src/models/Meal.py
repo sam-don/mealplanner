@@ -1,5 +1,6 @@
 from main import db
 
+
 class Meal(db.Model):
     __tablename__ = "meals"
 

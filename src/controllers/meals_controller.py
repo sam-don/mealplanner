@@ -1,9 +1,10 @@
-from models.Meal import Meal
-from main import db
-from schemas.MealSchema import meal_schema, meals_schema
 from flask import Blueprint, request, jsonify
+from schemas.MealSchema import meal_schema, meals_schema
+from main import db
+from models.Meal import Meal
 
 meals = Blueprint("meals", __name__, url_prefix="/meals")
+
 
 @meals.route("/", methods=["GET"])
 def meal_index():
@@ -24,6 +25,7 @@ def meal_create():
     db.session.commit()
 
     return jsonify(meal_schema.dump(new_meal))
+
 
 @meals.route("/<int:id>", methods=["GET"])
 def meal_show(id):

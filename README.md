@@ -36,7 +36,6 @@ Add New Meal
 - Python3.8
 - Mypy
 - Flake8
-- Requests
 - Psycopg2
 - Flask
 - SQLAlchemy

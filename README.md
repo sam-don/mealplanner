@@ -37,6 +37,10 @@ Add New Meal
 - Mypy
 - Flake8
 - Requests
+- Psycopg2
+- Flask
+- SQLAlchemy
+- Marshmallow
 
 #### Installation
 

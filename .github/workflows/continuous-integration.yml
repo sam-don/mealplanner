@@ -5,24 +5,24 @@ on:
     branches: [ master ]
 
 jobs:
-  Check-Code:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Environment setup
-        run: |
-          sudo apt-get update
-          sudo apt-get install python3.8 python3.8-venv -y
-          git clone https://github.com/sam-don/mealplanner.git
-          python3.8 -m venv mealplanner/venv
-          mealplanner/venv/bin/pip3 install flake8 mypy
+  # Check-Code:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Environment setup
+  #       run: |
+  #         sudo apt-get update
+  #         sudo apt-get install python3.8 python3.8-venv -y
+  #         git clone https://github.com/sam-don/mealplanner.git
+  #         python3.8 -m venv mealplanner/venv
+  #         mealplanner/venv/bin/pip3 install flake8 mypy
           
-      - name: Flake8 Test
-        run: |
-          mealplanner/venv/bin/flake8 mealplanner/src/main.py
+  #     # - name: Flake8 Test
+  #     #   run: |
+  #     #     mealplanner/venv/bin/flake8 mealplanner/src/main.py
 
-      - name: Mypy Test
-        run: |
-          mealplanner/venv/bin/mypy mealplanner/src/main.py
+  #     - name: Mypy Test
+  #       run: |
+  #         mealplanner/venv/bin/mypy mealplanner/src/main.py
   Run-Tests:
     runs-on: ubuntu-latest
     steps:
@@ -40,4 +40,4 @@ jobs:
           cd mealplanner
           source venv/bin/activate
           cd src
-          python3.8 -m unittest discover tests/
+          python3.8 -m unittest discover tests/ -v

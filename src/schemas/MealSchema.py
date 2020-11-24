@@ -1,6 +1,6 @@
 from main import ma
 from models.Meal import Meal
-from marshmallow.validate import Length, validate
+from marshmallow.validate import Length
 
 
 class MealSchema(ma.SQLAlchemyAutoSchema):

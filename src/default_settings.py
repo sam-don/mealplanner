@@ -1,8 +1,7 @@
 import os
-from flask_sqlalchemy import SQLAlchemy
 
 class Config(object):
-    SQlALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     @property
     def SQLALCHEMY_DATABASE_URI(self):
@@ -30,9 +29,3 @@ elif environment == "testing":
     app_config = TestingConfig()
 else:
     app_config = DevelopmentConfig()
-
-# def init_db(app):
-#     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URI")
-#     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-#     db = SQLAlchemy(app)
-#     return db

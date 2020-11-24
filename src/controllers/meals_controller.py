@@ -5,6 +5,7 @@ from main import db
 from models.Meal import Meal
 from models.User import User
 from flask_jwt_extended import jwt_required
+from sqlalchemy.orm import joinedload
 
 meals = Blueprint("meals", __name__, url_prefix="/meals")
 
@@ -12,7 +13,7 @@ meals = Blueprint("meals", __name__, url_prefix="/meals")
 @meals.route("/", methods=["GET"])
 def meal_index():
     # Return all meals
-    meals = Meal.query.all()
+    meals = Meal.query.options(joinedload("user")).all()
     return jsonify(meals_schema.dump(meals))
 
 

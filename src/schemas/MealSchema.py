@@ -1,10 +1,13 @@
 from main import ma
 from models.Meal import Meal
+from marshmallow.validate import Length, validate
 
 
 class MealSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = Meal
+
+    title = ma.String(required=True, validate=Length(min=3))
 
 
 meal_schema = MealSchema()

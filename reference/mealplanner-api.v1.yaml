@@ -145,7 +145,7 @@ paths:
       description: Create a new user.
   /meals:
     get:
-      summary: Your GET endpoint
+      summary: Get All Meals
       tags: []
       responses:
         '200':
@@ -180,10 +180,11 @@ paths:
                       required:
                         - email
                         - id
+              examples: {}
       operationId: get-meals
-      description: Get all meals
+      description: Retrieve all meal information.
     post:
-      summary: ''
+      summary: Create New Meal
       operationId: post-meals
       responses:
         '200':
@@ -214,13 +215,14 @@ paths:
                   - id
                   - title
                   - user
-      description: Create a meal
+      description: Create a new meal.
       parameters:
         - schema:
             type: string
           in: header
           name: Authorization
           description: 'JWT Bearer token required '
+          required: true
       requestBody:
         content:
           application/json:
@@ -233,6 +235,10 @@ paths:
                   minLength: 1
               required:
                 - title
+            examples:
+              Create Meal Sweet Potato Burrito Bowls:
+                value:
+                  title: Sweet Potato Burrito Bowls
         description: Title of meal
   '/meals/{meal_id}':
     parameters:
@@ -242,7 +248,7 @@ paths:
         in: path
         required: true
     get:
-      summary: Your GET endpoint
+      summary: Get Meal Info by Meal ID
       tags: []
       responses:
         '200':
@@ -262,7 +268,7 @@ paths:
                   - id
                   - title
       operationId: get-meals-meal_id
-      description: Get a single meal
+      description: Retrieve the information of a single meal with matching ID.
 components:
   schemas:
     User:

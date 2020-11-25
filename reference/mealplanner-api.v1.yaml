@@ -420,10 +420,16 @@ components:
     Meal:
       title: Meal
       type: object
-      description: ''
+      description: Contains information about meal
       properties:
         id:
-          type: string
+          type: integer
+          description: Unique identifier for the given meal
         title:
           type: string
+          minLength: 1
+      required:
+        - id
+        - title
+      x-examples: {}
   securitySchemes: {}

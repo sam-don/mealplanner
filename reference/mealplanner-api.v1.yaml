@@ -14,7 +14,7 @@ paths:
         required: true
         description: Id of an existing user.
     get:
-      summary: Get User Info by User ID
+      summary: EXAMPLE Get User Info by User ID
       tags: []
       responses:
         '200':
@@ -91,7 +91,7 @@ paths:
         description: Patch user properties to update.
   /user:
     post:
-      summary: Create New User
+      summary: EXAMPLE Create New User
       operationId: post-user
       responses:
         '200':

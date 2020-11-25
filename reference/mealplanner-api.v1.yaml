@@ -39,7 +39,7 @@ paths:
       operationId: get-users-userId
       description: Retrieve the information of the user with the matching user ID.
     patch:
-      summary: Update User Information
+      summary: EXAMPLE Update User Information
       operationId: patch-users-userId
       responses:
         '200':

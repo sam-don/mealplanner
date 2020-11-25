@@ -215,6 +215,14 @@ paths:
                   - id
                   - title
                   - user
+              examples:
+                Create Meal Sweet Potato Burrito Bowls:
+                  value:
+                    id: 23
+                    title: Sweet Potato Burrito Bowls
+                    user:
+                      email: test@test.com
+                      id: 6
       description: Create a new meal.
       parameters:
         - schema:
@@ -408,4 +416,13 @@ components:
         - lastName
         - email
         - emailVerified
+    Meal:
+      title: Meal
+      type: object
+      description: ''
+      properties:
+        id:
+          type: string
+        title:
+          type: string
   securitySchemes: {}

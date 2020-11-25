@@ -247,6 +247,7 @@ paths:
         name: meal_id
         in: path
         required: true
+        description: ID of meal
     get:
       summary: Get Meal Info by Meal ID
       tags: []
@@ -269,6 +270,101 @@ paths:
                   - title
       operationId: get-meals-meal_id
       description: Retrieve the information of a single meal with matching ID.
+      parameters: []
+    put:
+      summary: Update A Meal
+      operationId: put-meals-meal_id
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  id:
+                    type: number
+                  title:
+                    type: string
+                    minLength: 1
+                  user:
+                    type: object
+                    properties:
+                      email:
+                        type: string
+                        minLength: 1
+                      id:
+                        type: number
+                    required:
+                      - email
+                      - id
+                required:
+                  - id
+                  - title
+                  - user
+              examples: {}
+      description: Update the information of an existing meal.
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Authorization
+          description: 'JWT Bearer token required '
+          required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                title:
+                  type: string
+                  minLength: 1
+              required:
+                - title
+            examples: {}
+    delete:
+      summary: Delete A Meal
+      operationId: delete-meals-meal_id
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  id:
+                    type: number
+                  title:
+                    type: string
+                    minLength: 1
+                  user:
+                    type: object
+                    properties:
+                      email:
+                        type: string
+                        minLength: 1
+                      id:
+                        type: number
+                    required:
+                      - email
+                      - id
+                required:
+                  - id
+                  - title
+                  - user
+      description: Delete a meal
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: Authorization
+          description: 'JWT Bearer token required '
+          required: true
 components:
   schemas:
     User:

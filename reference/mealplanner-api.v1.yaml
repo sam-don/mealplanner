@@ -16,8 +16,6 @@ paths:
         description: Id of an existing user.
     get:
       summary: EXAMPLE Get User Info by User ID
-      tags:
-        - users
       responses:
         '200':
           description: User Found
@@ -39,6 +37,8 @@ paths:
           description: User Not Found
       operationId: get-users-userId
       description: Retrieve the information of the user with the matching user ID.
+      tags:
+        - Users
     patch:
       summary: EXAMPLE Update User Information
       operationId: patch-users-userId
@@ -91,6 +91,8 @@ paths:
                   lastName: Baker
                   dateOfBirth: '1985-10-02'
         description: Patch user properties to update.
+      tags:
+        - Users
   /user:
     post:
       summary: EXAMPLE Create New User
@@ -146,12 +148,10 @@ paths:
         description: Post the necessary fields for the API to create a new user.
       description: Create a new user.
       tags:
-        - users
+        - Users
   /meals:
     get:
       summary: Get All Meals
-      tags:
-        - meals
       responses:
         '200':
           description: OK
@@ -188,6 +188,8 @@ paths:
               examples: {}
       operationId: get-meals
       description: Retrieve all meal information.
+      tags:
+        - Meals
     post:
       summary: Create New Meal
       operationId: post-meals
@@ -253,6 +255,8 @@ paths:
                 value:
                   title: Sweet Potato Burrito Bowls
         description: Title of meal
+      tags:
+        - Meals
   '/meals/{meal_id}':
     parameters:
       - schema:
@@ -263,8 +267,6 @@ paths:
         description: ID of meal
     get:
       summary: Get Meal Info by Meal ID
-      tags:
-        - meals
       responses:
         '200':
           description: OK
@@ -285,6 +287,8 @@ paths:
       operationId: get-meals-meal_id
       description: Retrieve the information of a single meal with matching ID.
       parameters: []
+      tags:
+        - Meals
     put:
       summary: Update A Meal
       operationId: put-meals-meal_id
@@ -339,6 +343,8 @@ paths:
               required:
                 - title
             examples: {}
+      tags:
+        - Meals
     delete:
       summary: Delete A Meal
       operationId: delete-meals-meal_id
@@ -379,6 +385,8 @@ paths:
           name: Authorization
           description: 'JWT Bearer token required '
           required: true
+      tags:
+        - Meals
 components:
   schemas:
     User:
@@ -439,5 +447,5 @@ components:
       x-examples: {}
   securitySchemes: {}
 tags:
-  - name: meals
-  - name: users
+  - name: Meals
+  - name: Users
